@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node ./webpack.config.ts",
     "start": "webpack-dev-server --open --mode development",
     "run": "webpack serve -c ./webpack.config.js --open --mode development"
   },
@@ -14,10 +15,12 @@
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "^8.2.5",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "ts-node": "^10.8.1",
     "typescript": "^3.2.2",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",

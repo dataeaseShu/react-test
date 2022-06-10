@@ -1,43 +1,36 @@
 {
-  "compilerOptions": {
-    "declaration": true,
-    "baseUrl": ".",
-    "paths": {
-      "utils/*": ["include/utils/*"],
-      "stylesheets": ["stylesheets/"],
-      "examples": ["examples/"]
+  "ts-node": { // 这个是属于ts-node去编译配置文件的时候会执行的配置和开发的配置有所不同
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es5",
+      "sourceMap": true,
+      "removeComments": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "moduleResolution": "node",
+      "baseUrl": "./",
+      "typeRoots": ["node_modules/@types"],
+      "esModuleInterop": true
     },
-    "rootDirs": ["include"],
-    "outDir": "dist",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "sourceMap": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "rootDir": ".",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "importHelpers": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "noUnusedLocals": true
+    "exclude": ["node_modules"],
   },
-  "include": [  // 所需要用ts的文件
-    "lib/**/*",
-    "types/**/*",
-  ],
-  "exclude": [  //排除文件
-    "node_modules",
-    "build",
-    "dist",
-    "scripts",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts",
-    "*.js"
-  ]
+  "compilerOptions": {
+    "target": "es6", 
+    "module": "esnext",
+    "jsx": "react",
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/*"]
 }
